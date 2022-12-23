@@ -14,7 +14,7 @@ body {
   padding: 32px;
   background-color: #0a0a23;
   color: #fff;
-  border-bottom: 4px solid #f605ba;
+  border-bottom: 4px solid #d547b2;
 }
 
 .gallery {
@@ -40,4 +40,22 @@ body {
 .gallery::after {
   content: '';
   width: 350px;
+}
+
+.video-btn {
+  left: 100px;
+  outline: #fff;
+}
+
+.bs-example {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.modal-content iframe {
+  margin: 0 auto;
+  display: block;
+  border: none;
 }

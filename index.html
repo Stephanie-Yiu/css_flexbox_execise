@@ -2,24 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <!--/////////////-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+        var url = $('#cartoonVideo').attr('src');
+
+        /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+        $('#cartoonVideo').attr('src', '');
+
+        /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+        $('#myModal').on('shown.bs.modal', function () {
+          $('#cartoonVideo').attr('src', url);
+        });
+
+        /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+        $('#myModal').on('hide.bs.modal', function () {
+          $('#cartoonVideo').attr('src', '');
+        });
+      });
+    </script>
+
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <h1>css flexbox photo gallery</h1>
     </header>
+    <!--///////////-->
+    <div class="bs-example">
+      <!-- Button HTML (to Trigger Modal) -->
+      
+        <a
+          href="#myModal"
+          class="btn btn-lg btn-primary"
+          data-toggle="modal"
+          >Launch Demo Modal</a
+        >
+    </div>
+
+      <!-- Modal HTML -->
+      <div
+        id="myModal"
+        class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">YouTube Video</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  id="cartoonVideo"
+                  class="embed-responsive-item"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/E6TUs69Cw94?autoplay=1"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/////////////-->
+
     <div class="gallery">
       <img
         src="https://i.guim.co.uk/img/media/b563ac5db4b4a4e1197c586bbca3edebca9173cd/0_12_3307_1985/master/3307.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=61a26bf43da26e4ca97e932e5ee113f7" />
-      <img src="https://www.nme.com/wp-content/uploads/2022/10/Rick_And_Morty_Portal_Gun_JuRicksic_Mort-696x442.jpg" />
+      <img
+        src="https://www.nme.com/wp-content/uploads/2022/10/Rick_And_Morty_Portal_Gun_JuRicksic_Mort-696x442.jpg" />
       <img src="https://wallpaperaccess.com/full/6709877.jpg" />
       <img src="https://www.pinkvilla.com/imageresize/rick_and_morty.jpg?width=752&t=pvorg" />
-      <img src="https://c4.wallpaperflare.com/wallpaper/996/142/510/tv-show-rick-and-morty-rick-sanchez-hd-wallpaper-preview.jpg" />
+      <img
+        src="https://c4.wallpaperflare.com/wallpaper/996/142/510/tv-show-rick-and-morty-rick-sanchez-hd-wallpaper-preview.jpg" />
       <img src="https://wallpaperaccess.com/full/795172.jpg" />
-      <img src="https://image.winudf.com/v2/image1/Y29tLmFwc2UubXRyd2xwX3NjcmVlbl8wXzE1Nzk5MTc3MTFfMDA4/screen-0.jpg?fakeurl=1&type=.webp" />
+      <img
+        src="https://image.winudf.com/v2/image1/Y29tLmFwc2UubXRyd2xwX3NjcmVlbl8wXzE1Nzk5MTc3MTFfMDA4/screen-0.jpg?fakeurl=1&type=.webp" />
       <img src="https://wallpaperaccess.com/full/85323.png" />
       <img
         src="https://steamuserimages-a.akamaihd.net/ugc/945092371199438965/98E5C332BE3183A934635BF7A2486CCEC86E0A52/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" />
