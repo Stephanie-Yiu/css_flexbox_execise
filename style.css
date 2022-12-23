@@ -1,19 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 * {
   box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
 }
 
 body {
   margin: 0;
   font-family: sans-serif;
   background: #f5f6f7;
+  background-image: url(image/wallpaper.png);
+  font-family: 'Space Mono', monospace;
+}
+.container {
+  min-width: 70%;
+  background-color: #ff009d44;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   padding: 32px;
-  background-color: #04044d;
+  display: flex;
   color: #fff;
+}
+.schwifty {
+  display: flex;
+  position: sticky;
+
+  width: 100%;
+  align-self: center;
 }
 
 .gallery {
@@ -96,4 +115,18 @@ a:active {
   margin: 0 auto;
   display: block;
   border: none;
+  z-index: 9999 !important;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+h1 {
+  font-size: 200px;
 }
