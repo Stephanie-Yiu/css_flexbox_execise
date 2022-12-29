@@ -27,6 +27,11 @@ body {
   display: flex;
   color: #fff;
 }
+.top-logo {
+  display: flex;
+  align-self: center;
+  width: 121%;
+}
 .schwifty {
   display: flex;
   position: sticky;
@@ -128,5 +133,30 @@ a:active {
   background-color: #000;
 }
 h1 {
-  font-size: 200px;
+  font-size: 73px;
+}
+.rick {
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    margin: 0 auto;
+    min-width: 70%;
+    background-color: #00d5ff44;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .media {
+    display: block;
+    margin: auto 0;
+  }
+  .rick {
+    width: 100px;
+  }
+
+  .media-body h1 {
+    font-size: 39px;
+  }
 }
