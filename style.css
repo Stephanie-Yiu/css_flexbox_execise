@@ -138,9 +138,22 @@ h1 {
 .rick {
 }
 
+@media only screen and (max-width: 1191px) {
+  .rick {
+    width: 400px;
+  }
+
+  .media {
+    text-align: center;
+  }
+  .media-body h1 {
+    font-size: 25px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .container {
-    margin: 0 auto;
+    margin: 25px;
     min-width: 70%;
     background-color: #00d5ff44;
     backdrop-filter: blur(10px);
@@ -158,5 +171,16 @@ h1 {
 
   .media-body h1 {
     font-size: 39px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    margin: 10px;
+    min-width: 70%;
+    background-color: #ffdd0044;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
   }
 }
